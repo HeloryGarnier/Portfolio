@@ -23,3 +23,8 @@ setInterval(function() {
   const t = document.getElementById("clignotant3");
   t.style.visibility = (t.style.visibility === "hidden") ? "visible" : "hidden";
 }, 500);
+
+setInterval(function() {
+  const t = document.getElementById("clignotant4");
+  t.style.visibility = (t.style.visibility === "hidden") ? "visible" : "hidden";
+}, 500);
