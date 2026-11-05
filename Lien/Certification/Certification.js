@@ -1,0 +1,10 @@
+const dropBoutonDeroulant = document.querySelector('.bouton-deroulant');
+const droponglets = document.querySelector('.onglets');
+dropBoutonDeroulant.addEventListener('click', function() {
+  droponglets.classList.toggle("show");
+});
+
+setInterval(function() {
+  const t = document.getElementById("clignotant");
+  t.style.visibility = (t.style.visibility === "hidden") ? "visible" : "hidden";
+}, 500);

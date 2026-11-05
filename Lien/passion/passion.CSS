@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+Header {
+    background: #000000;
+    background: radial-gradient(circle,rgba(0, 0, 0, 1) 0%, rgba(50, 74, 65, 1) 8%, rgba(71, 125, 118, 1) 22%, rgba(53, 171, 153, 1) 37%, rgba(31, 194, 169, 1) 50%, rgba(23, 230, 226, 1) 73%, rgba(0, 255, 225, 1) 91%);
+    color: aliceblue;
+    text-align: center;
+    border: double;
+    border-color: white;
+    border-radius: 25px;
+    border-width: 15px;
+    font-size: 20px;
+}
+
+body {
+    background-color: black;
+}
+
+nav {
+    background-color: rgb(53, 171, 153);
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    grid-area: nav;
+}
+
+.onglets {
+    display: none;
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgb(255, 255, 255);
+    z-index: 1;
+    width: 90%;
+    text-align: center;
+}
+
+.menu-deroulant {
+    display: flex;
+    padding: 15px;
+    position: relative;
+    justify-content: center;
+}
+
+.bouton-deroulant {
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #ffffff;
+    font-weight: bold;
+}
+
+.show {
+    display: block;
+}
+
+.onglets a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    transition: font-size 0.5s ease, background-color 0.5s ease, color 0.5s ease;
+}
+
+a:hover {
+    font-size: 20px;
+    color:white;
+}
+
+.cv:hover {
+    background-color: rgb(51, 8, 151);
+}
+
+.stages:hover {
+    background-color: rgb(234, 236, 83);
+}
+
+.certifications:hover {
+    background-color: rgb(27, 105, 32);
+}
+
+.scolaire:hover {
+    background-color: rgb(122, 13, 13);
+}
+
+.projets:hover {
+    background-color: rgba(189, 85, 21);
+}
+
+.vieille:hover {
+    background-color: rgb(163, 36, 148);
+}
+
+.retour:hover {
+    background-color: rgb(17, 91, 156);
+}
+
+.intro {
+    color:white;
+    text-align: center;
+    font-size: 1.80em;
+    font-family: "EB Garamond", serif;
+    font-weight: 800;
+}
+
+.conteneur {
+    width: 70%;
+    margin: 35px;
+    padding: 20px;
+    margin-left: 200px;
+}
+
+.droite {
+    float:right;
+    margin-left: 30px;
+}
+
+.gauche {
+    float: left;
+    margin-right: 30px;
+}
+
+img {
+    max-width: 700px;
+    border: 12px white solid;
+    border-radius: 25px;
+
+}
+
+.text-box h3 {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+.text-box p {
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+

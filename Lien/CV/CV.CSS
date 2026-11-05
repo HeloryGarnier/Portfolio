@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+Header {
+background: #000000;
+background: radial-gradient(circle,rgba(0, 0, 0, 1) 0%, rgba(65, 46, 66, 1) 19%, rgba(183, 0, 255, 1) 36%, rgba(142, 33, 196, 1) 54%, rgba(111, 16, 194, 1) 71%, rgba(152, 72, 199, 1) 84%, rgba(174, 0, 255, 1) 94%, rgba(93, 0, 156, 1) 100%);
+    color: aliceblue;
+    text-align: center;
+    border: double;
+    border-color: white;
+    border-radius: 25px;
+    border-width: 15px;
+    font-size: 20px;
+}
+
+nav {
+    background-color: rgb(51, 8, 151);
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    grid-area: nav;
+}
+
+.onglets {
+    display: none;
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgb(255, 255, 255);
+    z-index: 1;
+    width: 90%;
+    text-align: center;
+}
+
+.menu-deroulant {
+    display: flex;
+    padding: 15px;
+    position: relative;
+    justify-content: center;
+}
+
+.bouton-deroulant {
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #ffffff;
+    font-weight: bold;
+}
+
+.onglets a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    transition: font-size 0.5s ease, background-color 0.5s ease;
+}
+
+.show {
+    display: block;
+}
+
+a:hover {
+    font-size: 20px;
+}
+
+.retour:hover {
+    background-color: rgb(17, 91, 156);
+}
+
+body {
+    background-color: rgb(3, 11, 44);
+    color: white;
+}
+
+main {
+    color: white;
+}
+
+.intro {
+    color:white;
+    text-align: center;
+    font-size: 1.80em;
+    font-family: "EB Garamond", serif;
+    font-weight: 800;
+}
+
+h3 {
+    color: aqua;
+    font-size: 40px;
+}
+
+.gras {
+    font-weight: bold;
+}
+
+p {
+    font-size: 30px;
+}

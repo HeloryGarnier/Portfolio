@@ -1,0 +1,66 @@
+
+Header {
+background: #000000;
+background: radial-gradient(circle,rgba(0, 0, 0, 1) 0%, rgba(107, 77, 50, 1) 19%, rgba(189, 85, 21, 1) 36%, rgba(217, 110, 17, 1) 54%, rgba(235, 137, 19, 1) 71%, rgba(235, 109, 0, 1) 84%, rgba(255, 123, 0, 1) 94%, rgba(255, 106, 0, 1) 100%);
+    color: aliceblue;
+    text-align: center;
+    border: double;
+    border-color: white;
+    border-radius: 25px;
+    border-width: 15px;
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    background-image: url(images-et-gif/orange.gif);
+    background-repeat: no-repeat;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-size: cover;
+    justify-content: space-around;
+    margin: 15px;
+    border-radius: 20px;
+}
+
+a {
+    background-color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: black;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.retour:hover {
+    background: radial-gradient(circle, rgba(2, 0, 36, 1) 10%, rgba(0, 64, 255, 1) 30%, rgba(9, 9, 121, 1) 51%, rgba(51, 41, 163, 1) 100%);
+    font-style: italic;
+    color:white
+}
+
+.intro {
+    color:white;
+    text-align: center;
+    font-size: 1.80em;
+    font-family: "EB Garamond", serif;
+    font-weight: 800;
+}
+
+article {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    margin: 25px;
+    padding: 25px;
+    background-clip: padding-box;
+    background-color: blue;
+    grid-area: article;
+}
+
+.droite {
+    float:right;
+    margin-left: 30px;
+}
+
