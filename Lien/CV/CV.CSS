@@ -7,16 +7,20 @@
     font-style: normal;
 }
 
-Header {
-background: #000000;
-background: radial-gradient(circle,rgba(0, 0, 0, 1) 0%, rgba(65, 46, 66, 1) 19%, rgba(183, 0, 255, 1) 36%, rgba(142, 33, 196, 1) 54%, rgba(111, 16, 194, 1) 71%, rgba(152, 72, 199, 1) 84%, rgba(174, 0, 255, 1) 94%, rgba(93, 0, 156, 1) 100%);
-    color: aliceblue;
+header {
+    justify-content: center;
+    grid-area: en_tete;
+    background-color: #1a1a2e;
+    color: white;
     text-align: center;
-    border: double;
-    border-color: white;
-    border-radius: 25px;
-    border-width: 15px;
-    font-size: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 15px;
+    font-size: 1.5rem;
+}
+
+.liencv {
+    font-size: 1.25rem;
 }
 
 nav {
@@ -74,6 +78,31 @@ nav {
 
 a:hover {
     font-size: 20px;
+    color:white;
+}
+
+.stages:hover {
+    background-color: rgb(234, 236, 83);
+}
+
+.certifications:hover {
+    background-color: rgb(27, 105, 32);
+}
+
+.scolaire:hover {
+    background-color: rgb(122, 13, 13);
+}
+
+.projets:hover {
+    background-color: rgba(189, 85, 21);
+}
+
+.vieille:hover {
+    background-color: rgb(163, 36, 148);
+}
+
+.passion:hover {
+    background-color: rgb(53, 171, 153);
 }
 
 .retour:hover {
@@ -108,4 +137,52 @@ h3 {
 
 p {
     font-size: 30px;
+}
+
+@media (min-width: 768px) {
+    .bouton-deroulant {
+        display: none;
+    }
+
+    .onglets {
+        display: flex;
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        position: static;
+        width: 100%;
+        height: 100%;
+        justify-content: space-around;
+        align-items: center;
+        gap: 4px;
+        box-shadow: none;
+    }
+
+    nav {
+        height: 75px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-deroulant {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+
+    .onglets a {
+        color:aliceblue;
+        font-size: 1vw;
+        margin: 0 2px;
+        background-color: black;
+        border-radius: 7px;
+        border: 1px solid white;
+        transition: font-size 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    a:hover {
+        font-size: 1.25vw;
+        box-shadow: 0 5px 7px black;
+    }
 }

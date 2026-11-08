@@ -1,56 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
 
-Header {
-background: #000000;
-background: radial-gradient(circle,rgba(0, 0, 0, 1) 0%, rgba(107, 77, 50, 1) 19%, rgba(189, 85, 21, 1) 36%, rgba(217, 110, 17, 1) 54%, rgba(235, 137, 19, 1) 71%, rgba(235, 109, 0, 1) 84%, rgba(255, 123, 0, 1) 94%, rgba(255, 106, 0, 1) 100%);
-    color: aliceblue;
+header {
+    justify-content: center;
+    grid-area: en_tete;
+    background-color: #1a1a2e;
+    color: white;
     text-align: center;
-    border: double;
-    border-color: white;
-    border-radius: 25px;
-    border-width: 15px;
-    font-size: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 15px;
+    font-size: 1.5rem;
 }
 
 nav {
-    display: flex;
-    background-image: url(images-et-gif/orange.gif);
-    background-repeat: no-repeat;
-    flex-wrap: wrap;
-    flex-direction: row;
-    background-size: cover;
-    justify-content: space-around;
-    margin: 15px;
-    border-radius: 20px;
-}
-
-a {
-    background-color: white;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    color: black;
+    background-color: rgb(17, 91, 156);
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    grid-area: nav;
 }
 
 body {
-    background-color: black;
+    background-color: rgb(4, 14, 54);
     color: white;
 }
 
-.retour:hover {
-    background: radial-gradient(circle, rgba(2, 0, 36, 1) 10%, rgba(0, 64, 255, 1) 30%, rgba(9, 9, 121, 1) 51%, rgba(51, 41, 163, 1) 100%);
-    font-style: italic;
-    color:white
+.onglets {
+    display: none;
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgb(255, 255, 255);
+    z-index: 1;
+    width: 90%;
+    text-align: center;
 }
 
-.intro {
+.menu-deroulant {
+    display: flex;
+    padding: 15px;
+    position: relative;
+    justify-content: center;
+}
+
+.bouton-deroulant {
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #ffffff;
+    font-weight: bold;
+}
+
+.show {
+    display: block;
+}
+
+.onglets a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    transition: font-size 0.5s ease, background-color 0.5s ease, color 0.5s ease;
+}
+
+a:hover {
+    font-size: 20px;
     color:white;
-    text-align: center;
-    font-size: 1.80em;
-    font-family: "EB Garamond", serif;
-    font-weight: 800;
+}
+
+.cv:hover {
+    background-color: rgb(51, 8, 151);
+}
+
+.stages:hover {
+    background-color: rgb(234, 236, 83);
+}
+
+.certifications:hover {
+    background-color: rgb(27, 105, 32);
+}
+
+.scolaire:hover {
+    background-color: rgb(122, 13, 13);
+}
+
+.retour:hover {
+    background-color: rgb(17, 91, 156);
+}
+
+.vieille:hover {
+    background-color: rgb(163, 36, 148);
+}
+
+.passion:hover {
+    background-color: rgb(53, 171, 153);
 }
 
 article {
-    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 35px;
     margin: 25px;
     padding: 25px;
@@ -59,8 +119,50 @@ article {
     grid-area: article;
 }
 
-.droite {
-    float:right;
-    margin-left: 30px;
-}
+@media (min-width: 768px) {
+    .bouton-deroulant {
+        display: none;
+    }
 
+    .onglets {
+        display: flex;
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        position: static;
+        width: 100%;
+        height: 100%;
+        justify-content: space-around;
+        align-items: center;
+        gap: 4px;
+        box-shadow: none;
+    }
+
+    nav {
+        height: 75px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-deroulant {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+
+    .onglets a {
+        color:aliceblue;
+        font-size: 1vw;
+        margin: 0 2px;
+        background-color: black;
+        border-radius: 7px;
+        border: 1px solid white;
+        transition: font-size 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    a:hover {
+        font-size: 1.25vw;
+        box-shadow: 0 5px 7px black;
+    }
+}

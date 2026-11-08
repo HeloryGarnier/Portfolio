@@ -7,20 +7,21 @@
     font-style: normal;
 }
 
-Header {
-    background: #000000;
-    background: radial-gradient(circle,rgba(0, 0, 0, 1) 0%, rgba(50, 74, 65, 1) 8%, rgba(71, 125, 118, 1) 22%, rgba(53, 171, 153, 1) 37%, rgba(31, 194, 169, 1) 50%, rgba(23, 230, 226, 1) 73%, rgba(0, 255, 225, 1) 91%);
-    color: aliceblue;
+header {
+    justify-content: center;
+    grid-area: en_tete;
+    background-color: #1a1a2e;
+    color: white;
     text-align: center;
-    border: double;
-    border-color: white;
-    border-radius: 25px;
-    border-width: 15px;
-    font-size: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 15px;
+    font-size: 1.05rem;
 }
 
 body {
-    background-color: black;
+    background-color: rgb(4, 14, 54);
+    color: white;
 }
 
 nav {
@@ -109,47 +110,169 @@ a:hover {
     background-color: rgb(17, 91, 156);
 }
 
-.intro {
-    color:white;
-    text-align: center;
-    font-size: 1.80em;
-    font-family: "EB Garamond", serif;
-    font-weight: 800;
-}
-
-.conteneur {
-    width: 70%;
-    margin: 35px;
+.gallerie {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
     padding: 20px;
-    margin-left: 200px;
 }
 
-.droite {
-    float:right;
-    margin-left: 30px;
+.fenetre1,
+.fenetre2,
+.fenetre3,
+.fenetre4 {
+    grid-area: fenetre;
 }
 
-.gauche {
-    float: left;
-    margin-right: 30px;
+.image1,
+.image2,
+.image3,
+.image4 {
+    grid-area: image;
 }
 
-img {
-    max-width: 700px;
-    border: 12px white solid;
-    border-radius: 25px;
-
+.carte {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+        "fenetre"
+        "image";
 }
 
-.text-box h3 {
-    text-align: center;
-    font-size: 40px;
-    color: white;
+.carte h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
 }
 
-.text-box p {
-    font-size: 20px;
-    text-align: center;
-    color: white;
+.carte p {
+    padding: 0 12px 15px;
+    font-size: 1em;
 }
 
+.carte img {
+    display: block;
+    width: 92%;
+    height: auto;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.barre_de_fenetre {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: calc(100% - 30px);
+  min-height: 36px;
+  padding: 0 12px;
+  background: #2b2d3a;
+  border-radius: 8px 8px 0 0;
+  grid-area: barre_de_fenetre;
+  margin: 20px auto 0;
+}
+
+.onglets-fenetre,
+.boutons-fenetre {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.barre-donglet {
+    background-color: black;
+    border-radius: 8px 8px 0 0;
+    padding: 12px;
+}
+
+.bouton_rouge {
+  background-color: #ff5f57;
+}
+    
+.bouton_jaune {
+  background-color: #febc2e;
+}
+
+.bouton_vert {
+  background-color: #28c840;
+}
+
+.bouton_rouge,
+.bouton_jaune,
+.bouton_vert {
+  display: block;
+  flex: 0 0 13px;
+  width: 13px;
+  height: 13px;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  border-radius: 50%;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.35), 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.fenetre {
+    background-color: black;
+    font-size: 1rem;
+    margin: 0 15px;
+    padding: 25px;
+    background-clip: padding-box;
+}
+
+@media (min-width: 768px) {
+    .bouton-deroulant {
+        display: none;
+    }
+
+    .onglets {
+        display: flex;
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        position: static;
+        width: 100%;
+        height: 100%;
+        justify-content: space-around;
+        align-items: center;
+        gap: 4px;
+        box-shadow: none;
+    }
+
+    nav {
+        height: 75px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-deroulant {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+
+    .onglets a {
+        color:aliceblue;
+        font-size: 1vw;
+        margin: 0 2px;
+        background-color: black;
+        border-radius: 7px;
+        border: 1px solid white;
+        transition: font-size 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    a:hover {
+        font-size: 1.25vw;
+        box-shadow: 0 5px 7px black;
+    }
+
+    .carte {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas:
+            "fenetre image";
+        align-items: center;
+    }
+
+    .carte img {
+        width: 40%;
+        height: auto;
+    }
+}
